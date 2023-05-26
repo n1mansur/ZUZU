@@ -1,0 +1,27 @@
+.about {
+  background: #f6f6f6;
+  padding: 40px 96px;
+  &__container {
+    max-width: 834px;
+    padding: 32px 24px;
+    background: #fff;
+    border-radius: 12px;
+    .img__box > img {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+}
+.text {
+  .title {
+    font-weight: 700;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+  & > p {
+    margin-bottom: 16px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

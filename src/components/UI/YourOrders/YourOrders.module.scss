@@ -1,0 +1,47 @@
+@import '../../../styles/mixins';
+.yourOrder {
+  background: #fff;
+  border-radius: 12px;
+  max-width: 405px;
+  width: 100%;
+  @include md {
+    display: none;
+  }
+  .heroSection {
+    height: 60px;
+    padding: 10px 24px;
+  }
+  .orderList {
+    padding: 10px 24px;
+    .totalPrice {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 500;
+      font-size: 16px;
+    }
+  }
+  .totalSection {
+    padding: 10px 24px;
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      & > span {
+        font-weight: 600;
+        font-size: 20px;
+      }
+    }
+    .totalBtn {
+      width: 100%;
+      height: 52px;
+      background: #ec8d1e;
+      border-radius: 100px;
+      border: none;
+      color: #fff;
+    }
+  }
+}
+.title {
+  font-weight: 700;
+  font-size: 32px;
+}

@@ -1,0 +1,51 @@
+.singFilial {
+  background: #f6f6f6;
+  padding: 40px 96px;
+  &__container {
+    max-width: 834px;
+    //padding: 32px 24px;
+    background: #fff;
+    border-radius: 12px;
+    .img__box > img {
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+}
+.text {
+  padding: 16px 24px;
+  .title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+}
+.body {
+  padding: 32px 24px;
+  & > p {
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  & > P:nth-child(2) {
+    margin-bottom: 32px;
+  }
+  .img__box {
+    margin-bottom: 32px;
+  }
+  .info__section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    & > p {
+      font-weight: 400;
+      font-size: 20px;
+      color: #808080;
+      & > span {
+        font-weight: 500;
+        font-size: 20px;
+        color: black;
+      }
+    }
+  }
+}

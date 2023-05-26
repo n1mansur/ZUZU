@@ -1,0 +1,50 @@
+.menuBtn {
+  border: none;
+  background: transparent;
+  padding: 5px;
+  border-radius: 6px;
+  &:hover {
+    background: #ec8d1e;
+    color: #fff;
+  }
+}
+.listItem {
+  width: 291px;
+}
+.link {
+  width: 259px;
+  height: 48px;
+  padding: 30px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #ec8d1e;
+  &:hover {
+    background: #ec8d1e;
+    color: #fff;
+  }
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  &__span {
+    font-weight: 600;
+    font-size: 24px;
+  }
+  .closeBtn {
+    padding: 5px;
+    color: #808080;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    &:hover {
+      background: #ec8d1e;
+      color: #fff;
+    }
+  }
+}

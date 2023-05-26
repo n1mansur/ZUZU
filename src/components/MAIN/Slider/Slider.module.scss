@@ -1,0 +1,14 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.slider {
+  position: relative;
+  max-width: 1248px;
+  max-height: 540px;
+  margin-bottom: 40px;
+  @media (max-width: 768px) {
+    margin-bottom: 24px;
+  }
+}

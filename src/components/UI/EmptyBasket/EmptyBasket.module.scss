@@ -1,0 +1,43 @@
+.emptyBasket {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  max-width: 550px;
+  padding: 40px 117px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.img {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+.text {
+  .title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  .subTitle {
+    font-weight: 400;
+    font-size: 13px;
+  }
+}
+.btn {
+  width: 100%;
+  padding: 16px;
+  background: #ec8d1e;
+  border-radius: 33px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+}

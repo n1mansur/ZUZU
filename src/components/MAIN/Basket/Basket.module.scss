@@ -1,0 +1,48 @@
+@import '../../../styles/mixins';
+.basket {
+  background: #f6f6f6;
+  padding: 40px 96px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 10px;
+  @media (max-width: 1024px) {
+    padding: 20px 50px;
+  }
+  @media (max-width: 500px) {
+    padding: 10px 20px;
+  }
+  &__container {
+    background: #fff;
+    max-width: 827px;
+    width: 100%;
+    border-radius: 12px;
+    .hero__section {
+      height: 60px;
+      padding: 10px 24px;
+      display: flex;
+      justify-content: space-between;
+      .title {
+        font-weight: 700;
+        font-size: 32px;
+        margin-right: 20px;
+        @include sm {
+          font-weight: 400;
+          font-size: 22px;
+        }
+      }
+      .clear_basket {
+        border: none;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        padding: 10px;
+        border-radius: 10px;
+        &:hover {
+          box-shadow: 0 0 5px gray;
+        }
+      }
+    }
+  }
+}

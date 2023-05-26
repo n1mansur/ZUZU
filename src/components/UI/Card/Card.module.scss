@@ -1,0 +1,155 @@
+.card {
+  grid-template-rows: auto 1fr minmax(40px, auto);
+  height: 410px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  list-style-type: none;
+  padding: 16px;
+
+  &__img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .unavailable {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > span {
+        padding: 10px 16px;
+        color: #fff;
+        background: #000000a8;
+        border-radius: 100px;
+      }
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  &__subtitle {
+    font-weight: 500;
+    font-size: 16px;
+    color: #808080;
+    margin-bottom: 24px;
+  }
+}
+.card__price {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  & > span {
+    color: #ec8d1e;
+    font-weight: 600;
+    font-size: 16px;
+  }
+}
+.unav {
+  filter: grayscale(1);
+}
+.button {
+  background: #f5f5f5;
+  border-radius: 34px;
+  padding: 10px 24px;
+  border: none;
+  font-weight: 500;
+  font-size: 16px;
+  transition: 0.3s all;
+  color: #bcbcbc;
+  //cursor: default;
+  cursor: not-allowed;
+}
+////////*********
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #fff;
+  padding: 32px;
+  width: 802px;
+  height: 326px;
+  border-radius: 12px;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img {
+  width: 250px;
+  height: 250px;
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+}
+.order__section {
+  max-width: 428px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  .order__title {
+    font-weight: 700;
+    font-size: 32px;
+  }
+  .order__subTitle {
+    font-weight: 400;
+    font-size: 18px;
+  }
+  .btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    & > span {
+      font-weight: 600;
+      font-size: 16px;
+    }
+    & > .buy {
+      width: 260px;
+      height: 48px;
+      border: none;
+      border-radius: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background: #fff;
+      color: #ec8d1e;
+      box-shadow: 0 0 5px #ec8d1e;
+      transition: 0.5s all;
+      &:hover {
+        background: #ec8d1e;
+        color: #fff;
+      }
+    }
+    & > .button {
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      transition: 0.5s all;
+      &:hover {
+        background: #fff;
+        box-shadow: 0 0 10px #bcbcbc;
+      }
+    }
+  }
+}
+.close {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: none;
+  background: transparent;
+}
