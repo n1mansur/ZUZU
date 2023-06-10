@@ -1,27 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from './SingFilial.module.scss'
 import img from '../../../img/Filial.jpg'
-import data from '../Filials/data'
+//import data from '../Filials/data'
 import { useParams } from 'react-router'
-
+import { getAllBranches } from '../../../service/service'
 export default function SingFilial() {
   const { id } = useParams()
-  const currentId = id - 1
-
+  const [data, setData] = useState([])
+  useEffect(() => {
+    getAllBranches().then((res) => setData(res.data.filter((el) => el.id == id)))
+    //getAllBranches().then((res) => setData(res.data))
+  }, [])
+  const currentData = data.length ? data[0] : []
+  //console.log(currentData)
   return (
     <div className={styles.singFilial}>
       <div className={styles.singFilial__container}>
         <div className={styles.text}>
-          <h2 className={styles.title}>{data[currentId].filial}</h2>
+          <h2 className={styles.title}>{currentData.name}</h2>
         </div>
         <div className={styles.body}>
-          <p>
-            Название кафе «Zuzu» переводится с грузинского как «комната для
-            приёмов». В интерьере заведения королевская пышность сочетается с
-            уютом гостиной: на полу лежат домотканые орнаментальные ковры, зал
-            украшает мебель из антикварного магазина, а серванты заполнены
-            милыми безделушками.
-          </p>
+          <p>{currentData.description}</p>
           <p>
             Еду здесь готовят по-домашнему, точно в тбилисском сахли. Посетители
             рекомендуют брать «бадриджаны бебия», то есть «баклажаны по
@@ -33,13 +32,14 @@ export default function SingFilial() {
           </div>
           <div className={styles.info__section}>
             <p>
-              Адрес: <span>{data[currentId].location}</span>
+              Адрес: <span>{currentData.address}</span>
             </p>
             <p>
-              Часы работы: <span>{data[currentId].hours}</span>
+              Часы работы:{' '}
+              <span>{currentData.to_time + currentData.to_time}</span>
             </p>
             <p>
-              Номер телефона: <span>{data[currentId].phone}</span>
+              Номер телефона: <span>{currentData.number}</span>
             </p>
           </div>
         </div>

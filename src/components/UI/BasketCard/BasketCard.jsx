@@ -9,6 +9,7 @@ import {
   minusActionCreater,
   plusActionCreater,
 } from '../../../redux/redux'
+const img = 'images/pizza.png'
 
 export default function BasketCard({ order }) {
   const dispatch = useDispatch()
@@ -26,7 +27,7 @@ export default function BasketCard({ order }) {
     <li className={styles.basket__item}>
       <div className={styles.pizzaInfo}>
         <div className={styles.item__img}>
-          <img src={order.img} alt="Img" />
+          <img src={order.img || img} alt="Img" />
         </div>
         <div className={styles.item__title}>
           <h3>{order.name}</h3>

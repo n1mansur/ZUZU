@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './Card.module.scss'
 import ModalButton from '../../MUI/ModalButton/ModalButton'
+const img = 'images/pizza.png'
 
 export default function Card({ el, setOpen }) {
   const available = el.status ? (
@@ -19,7 +20,7 @@ export default function Card({ el, setOpen }) {
   return (
     <li className={styles.card}>
       <div className={styles.card__img}>
-        <img className={unavailableClass} src={el.img} alt="Pizza" />
+        <img className={unavailableClass} src={el.img || img} alt="Pizza" />
         {unavailable}
       </div>
       <div className={styles.card__text}>

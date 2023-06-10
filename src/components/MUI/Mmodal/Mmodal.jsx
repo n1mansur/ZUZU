@@ -6,6 +6,7 @@ import RemoveIcon from '@mui/icons-material/Remove'
 import CloseIcon from '@mui/icons-material/Close'
 import { useDispatch } from 'react-redux'
 import { addOrderActionCreater } from '../../../redux/redux'
+const img = 'images/pizza.png'
 
 export default function Mmodal({ open, setOpen }) {
   const dispatch = useDispatch()
@@ -40,7 +41,7 @@ export default function Mmodal({ open, setOpen }) {
             <CloseIcon />
           </button>
           <div className={styles.img}>
-            <img src={open?.img} alt="Order-img" />
+            <img src={open?.img || img} alt="Order-img" />
           </div>
           <div className={styles.order__section}>
             <h2 className={styles.order__title}>{open?.name}</h2>

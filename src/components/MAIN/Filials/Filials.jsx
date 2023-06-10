@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './Filials.module.scss'
 import Filial from '../../UI/Filial/Filial'
-import data from './data'
+//import data from './data'
 import Button from '../../UI/Button/Button'
 import { Link } from 'react-router-dom'
+import { getAllBranches } from '../../../service/service'
+import { useState } from 'react'
 
 export default function Filials() {
+  const [data, setData] = useState([])
+  useEffect(() => {
+    getAllBranches().then((res) => setData(res.data))
+  }, [])
   const filialsMap = (arr) => {
-    return arr.map((el, i) => {
+    return arr.map((el) => {
       return (
-        <Link to={`/filials/${el.id}`} key={i}>
-          <Filial value={el} key={i} />
+        <Link to={`/filials/${el.id}`} key={el.id}>
+          <Filial value={el} />
         </Link>
       )
     })

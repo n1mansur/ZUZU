@@ -11,8 +11,6 @@ export default function Ordering() {
     //if (e.target == document.getElementById(currentInp.value)) {
     //  console.log(e.target)
     //}
-    console.log(document.getElementById(currentInp.value).id)
-    console.log(currentInp.value)
     document.getElementById(currentInp.value).classList.add(styles.active)
   }
 

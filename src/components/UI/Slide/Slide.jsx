@@ -8,7 +8,7 @@ import './styles.scss'
 
 import { Keyboard, Mousewheel, Navigation, Pagination } from 'swiper'
 
-export default function Slide({ img }) {
+export default function Slide({ img, img2 }) {
   return (
     <Swiper
       loop={true}
@@ -20,17 +20,17 @@ export default function Slide({ img }) {
       modules={[Navigation, Pagination, Mousewheel, Keyboard]}
       className="mySwiper"
     >
-      <SwiperSlide >
+      <SwiperSlide>
         <img src={img} alt="img" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={img2} alt="img" />
       </SwiperSlide>
       <SwiperSlide>
         <img src={img} alt="img" />
       </SwiperSlide>
       <SwiperSlide>
-        <img src={img} alt="img" />
-      </SwiperSlide>
-      <SwiperSlide>
-        <img src={img} alt="img" />
+        <img src={img2} alt="img" />
       </SwiperSlide>
     </Swiper>
   )
