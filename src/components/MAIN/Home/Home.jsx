@@ -25,10 +25,8 @@ export default function Home() {
         <Slider />
         <Categories />
         <div className={styles.card__section} id="pizza">
-          <div className={styles.container}>
-            <h2 className={styles.section__title}>Pizza</h2>
-            <ul className={styles.cards}>{mappedData(data, setOpen)}</ul>
-          </div>
+          <h2 className={styles.section__title}>Pizza</h2>
+          <ul className={styles.cards}>{mappedData(data, setOpen)}</ul>
         </div>
         {datas.map((products, i) => (
           <ProductCard products={products} key={i} setOpen={setOpen} />
