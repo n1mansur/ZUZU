@@ -22,7 +22,8 @@
   gap: 20px;
   padding: 0;
   @media (max-width: 400px) {
-    flex-wrap: nowrap;
+    //flex-wrap: nowrap;
+    gap: 5px;
     width: 100%;
   }
   & > .item {
